@@ -1,7 +1,8 @@
 // Windows Jenkins agent with Git, Docker Desktop, and PowerShell available.
 // Configure the Jenkins job as "Pipeline script from SCM" (Git).
 pipeline {
-    agent { label 'windows-docker' }
+    agent any
+    
     options { timestamps(); disableConcurrentBuilds() }
     environment {
         DEPLOY_PATH = 'C:\\deploy\\live-task-board'
